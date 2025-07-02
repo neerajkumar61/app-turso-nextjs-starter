@@ -1,0 +1,27 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "outputDirectory": ".next",
+  "env": {
+    "NEXT_TURSO_DB_URL": "@turso-db-url",
+    "NEXT_TURSO_DB_AUTH_TOKEN": "@turso-db-auth-token"
+  },
+  "build": {
+    "env": {
+      "NEXT_TURSO_DB_URL": "@turso-db-url",
+      "NEXT_TURSO_DB_AUTH_TOKEN": "@turso-db-auth-token"
+    }
+  },
+  "functions": {
+    "app/api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "regions": ["iad1"],
+  "github": {
+    "autoAlias": false,
+    "silent": true
+  }
+}
